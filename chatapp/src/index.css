@@ -1,0 +1,443 @@
+body {
+  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.videoframe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 100vh;
+}
+
+.connectedVideo{
+  background: #11053a;
+}
+
+
+.userVideo{
+  object-fit:contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 2; /* Higher z-index to overlay the content */
+  pointer-events: auto; /* Makes it non-interactive */
+  
+}
+
+.myVideodiv{
+ display: flex;
+ justify-content: center;
+ margin-top: 50px;
+ margin-right: 150px;
+}
+
+.myVideo{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.screenVideo{
+  width: 110px;
+  height: 110px;   
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 2; /* Higher z-index to overlay the content */
+  pointer-events: auto; /* Makes it non-interactive */
+  border-radius: 50%;
+  object-fit:cover;
+  margin-left: 5px;
+  margin-top: 5px;
+
+}
+
+
+/* .ownVideo{
+  width: 150px;
+  height: 150px; 
+  border-radius: 50%;
+  object-fit:cover;
+} */
+
+
+
+
+.but{
+  position: absolute;
+  right: 15%; /* Position horizontally in the center */
+  transform: translateX(-50%); /* Center the element */
+  bottom: 40px; /* 40px margin from the bottom */
+  width: 60px; /* Set the width of your div as needed */
+  height: 60px; /* Set the height of your div as needed */
+  background-color: #04f400;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 40px;
+  z-index: 2;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shreIcon{
+  font-size: 30px;
+  align-items: center;
+ 
+}
+
+.hangUpIcon{
+  font-size: 30px;
+  align-items: center;
+}
+
+
+.but:hover{
+  width: 58px;
+  height: 58px;
+  background-color: #ff09f3;
+  color: rgb(0, 0, 0);
+}
+
+.hangUp{
+  padding: 0;
+  position: absolute;
+  left: 30%; /* Position horizontally in the center */
+  transform: translateX(-50%); /* Center the element */
+  bottom: 40px;/* 40px margin from the bottom */
+  width: 60px; /* Set the width of your div as needed */
+  height:60px; /* Set the height of your div as needed */
+  background-color: #ff0909;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 40px;
+  z-index: 2;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hangUp:hover{
+  width: 58px;
+  height: 58px;
+  background-color: #09ffda;
+  color: rgb(0, 0, 0);
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 2; /* Higher z-index to overlay the content */
+  pointer-events: auto; /* Makes it non-interactive */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Lower z-index to be behind the overlay */
+  /* Other styles for your content */
+}
+
+.contentBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-right: 100px;
+}
+
+.callIcon{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #1fff01;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  cursor: pointer;
+  
+}
+
+.callIcon:hover{
+  width: 50px;
+  height: 50px;
+  
+}
+
+.REccallIcon{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #1fff01;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+.REccallIcon:hover{
+  width: 50px;
+  height: 50px;
+  
+}
+
+
+
+
+.cutCall{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #ff0101;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  cursor: pointer;
+  margin-top: 70px;
+  
+}
+
+.cutCall:hover{
+  width: 50px;
+  height: 50px;
+  
+}
+
+
+
+
+.coppy{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #2e0efd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 20px;
+ cursor: pointer;
+ font-size: 10px;
+}
+
+.con{
+  margin-top: 0;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+  color: #ff0909;
+  
+}
+.coppy:hover{
+  width: 43px;
+  height: 43px;
+}
+
+.copyy{
+  font-size: 30px;
+  align-items: center;
+}
+
+.copyyy{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fa32e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 20px;
+ cursor: pointer;
+}
+.copyyy:hover{
+  width: 45px;
+  height: 45px;
+}
+.copIcon{
+  font-size: 30px;
+  align-items: center;
+}
+
+
+
+
+.callI{
+  font-size: 32px;
+  align-items: center;
+  
+}
+
+
+.callbutt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.in{
+  background: #6e1071;
+  height: 25px;
+  color: #ffffff;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+
+}
+
+.anserCalll{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-right: 100px;
+}
+
+.callingheading{
+  color: #ff0909;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.numm{
+  width: 42px;
+  height: 42px;
+  background: #0ff8e4;
+  border-radius: 50%;
+  color: #000000;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.both-button{
+  display: flex;
+  align-items: end;
+
+ 
+}
+
+.sharebutt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 14px;
+  margin-top: 20px;
+}
+
+
+.callButtton{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.cutcallbg{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cutpage{
+  width: 80%;
+  height: 90vh;
+  background-color: rgba(85, 0, 30, 0.5); /* Here, RGBA is used for a red background with 50% opacity */
+  border: 2px solid #000;
+  border-radius: 25px;
+  position: absolute;
+  top:0;
+  left: 2;
+ margin-top: 20px;
+  z-index: 2; /* Higher z-index to overlay the content */
+  pointer-events: auto; /* Makes it non-interactive */
+}
+
+.cutCauuButt{
+  padding: 0;
+  position: absolute;
+  left: 50%; /* Position horizontally in the center */
+  transform: translateX(-50%); /* Center the element */
+  bottom: 120px;/* 40px margin from the bottom */
+  width: 60px; /* Set the width of your div as needed */
+  height:60px; /* Set the height of your div as needed */
+  background-color: #ff0909;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 40px;
+  z-index: 2;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cutcallEnded{
+  font-weight: bolder;
+  font-style: italic;
+  margin-top: 160px;
+  font-size: 30px;
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+
